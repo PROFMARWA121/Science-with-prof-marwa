@@ -70,7 +70,28 @@ margin-top:40px;
 </head>
 
 <body>
+<div id="welcome" style="height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(135deg,#8e44ad,#ff69b4);color:white;text-align:center;padding:20px;">
 
+<h1>مرحباً بكم في موقع الأستاذة مروة</h1>
+
+<p>المنصة الشاملة والمبتكرة للتحضير لمادة علوم الطبيعة والحياة</p>
+
+<button onclick="openSite()"
+style="padding:15px 35px;border:none;border-radius:30px;font-size:18px;background:white;color:#8e44ad;font-weight:bold;">
+🚀 استكشف الموقع
+</button>
+
+<br><br>
+
+<a href="https://t.me/sciencesmarwa"
+target="_blank"
+style="color:white;font-size:18px;text-decoration:none;">
+📢 قناة التليجرام
+</a>
+
+</div>
+
+<div id="mainSite" style="display:none;">
 <header>
 <h1>مرحباً بك في موقع الأستاذة مروة</h1>
 
@@ -140,7 +161,14 @@ background: #1e1e1e !important;
 color: white !important;
 }
 </style>
+</div>
 
+<script>
+function openSite(){
+document.getElementById("welcome").style.display="none";
+document.getElementById("mainSite").style.display="block";
+}
+</script>
 
 </body>
 </html>
