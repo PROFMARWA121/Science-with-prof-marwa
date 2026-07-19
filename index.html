@@ -94,7 +94,67 @@ margin-bottom:15px;">
 🚀 استكشف الموقع
 </a>
 
-<a href="https://t.me/sciencesmarwa" style="display:block;background:#28a8ea;color:white;padding:18px;border-radius:30px;text-decoration:none;font-size:22px;margin-bottom:15px;">📢 انضم إلينا على التلغرام</a>
+<a id="socialCard"
+href="https://t.me/sciencesmarwa"
+style="
+display:block;
+background:#28a8ea;
+color:white;
+padding:22px;
+border-radius:30px;
+text-decoration:none;
+font-size:24px;
+font-weight:bold;
+text-align:center;
+margin-bottom:10px;">
+📢 انضم إلينا على التلغرام
+</a>
+
+<div id="dots" style="text-align:center;margin-bottom:20px;">
+● ○ ○
+</div>
+
+<script>
+const cards = [
+{
+text:"📢 انضم إلينا على التلغرام",
+link:"https://t.me/sciencesmarwa",
+color:"#28a8ea",
+dots:"● ○ ○"
+},
+{
+text:"📘 انضم إلينا على فايسبوك",
+link:"https://www.facebook.com/share/19A5CzdY4t/",
+color:"#1877f2",
+dots:"○ ● ○"
+},
+{
+text:"📸 انضم إلينا على إنستغرام",
+link:"https://www.instagram.com/prof_marwa_sciences?igsh=MjF1ODc3YWRwMmc5",
+color:"#d62976",
+dots:"○ ○ ●"
+}
+];
+
+let current = 0;
+
+setInterval(() => {
+current = (current + 1) % cards.length;
+
+document.getElementById("socialCard").innerHTML =
+cards[current].text;
+
+document.getElementById("socialCard").href =
+cards[current].link;
+
+document.getElementById("socialCard").style.background =
+cards[current].color;
+
+document.getElementById("dots").innerHTML =
+cards[current].dots;
+
+}, 4000);
+</script>
 
 <a href="countdown.html"
 style="display:block;
